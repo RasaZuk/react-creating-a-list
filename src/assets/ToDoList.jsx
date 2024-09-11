@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function ToDoList() {
 
-    const [tasks, setTasks] = useState("[isplauti]", "[nusiprausti]");
+    const [tasks, setTasks] = useState(['Issimiegoti']);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
@@ -24,26 +24,25 @@ export function ToDoList() {
         const updatedTasks = [...tasks];
         if (index > 0) {
           [updatedTasks[index], updatedTasks[index-1]] = [updatedTasks[index - 1], updatedTasks[index]];
-        setTasks(updatedTasks)  
+        setTasks(updatedTasks)  ;
         }
     }
 
     function moveTaskDown(index) {
         const updatedTasks = [...tasks];
-        if (index < tasks.length) {
+        if (index < tasks.length-1) {
           [updatedTasks[index], updatedTasks[index+1]] = [updatedTasks[index +1], updatedTasks[index]];
-        setTasks(updatedTasks)  
-        };
+        setTasks(updatedTasks) ; 
+        }
     }
 
-    return <>
-   
-        <div>        
-         <h1>TO-DO-LIST</h1>
-        <div>
+    return <>  
+    <main>
+        <h1>TO-DO-LIST</h1>
+         <div className="enter">    
             <input type="text" placeholder="Enter a task" value={newTask} onChange={handleInputChange} />
             <button className="addButton" onClick={addTask}>ADD</button>
-            </div>
+        </div>
             <ul>
                 {
                 tasks.map((task, index) =>
@@ -55,7 +54,8 @@ export function ToDoList() {
                     </li>)
                 }
             </ul>
-        </div>
+    </main>
+         
     </>  
 }
 

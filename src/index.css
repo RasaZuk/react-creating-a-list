@@ -9,3 +9,60 @@ body * {
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.enter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+input {
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+.addButton {
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+button {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+  padding: 0.5rem;
+}
+
+.delete {
+  background-color: red;
+}
+.up {
+  background-color: green;
+}
+.down {
+  background-color: blue;
+}
